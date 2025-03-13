@@ -1,0 +1,185 @@
+/* Modal overlay for background dimming */
+.author-form-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+}
+
+/* Modal container with animation */
+.author-form-modal-container {
+    background-color: #fff;
+    width: 500px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateY(50px);
+    animation: slideUp 0.5s forwards;
+    z-index: 1010;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+/* Modal close icon styling */
+.modal-close-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.modal-close-icon:hover {
+    color: #f44336;
+}
+
+/* Form title */
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input field styles */
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.textarea-field {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* File input styling */
+.file-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.file-input {
+    width: 96%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.file-input:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.author-photo-link {
+    position: absolute;
+    right: 40px;
+    /* margin-bottom: 15px; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.current-photo-link:hover {
+    color: #388e3c;
+}
+
+/* Save button styling */
+.save-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message styling */
+.error-message {
+    color: #f44336;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+/* Exit animation for closing the modal */
+.author-form-modal-container.closing {
+    animation: slideDown 0.5s forwards;
+}

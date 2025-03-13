@@ -1,0 +1,70 @@
+.purchase-requests-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.purchases-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.purchase-details-container {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.purchase-details-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.purchase-details-button:hover {
+  background-color: #45a049;
+}
+
+.purchase-requests-list {
+  list-style: none;
+  padding: 0;
+}
+
+.purchase-request-item {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-actions {
+  margin-top: 10px;
+}
+
+.approve-purchase-button, .reject-purchase-button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.approve-purchase-button {
+  background-color: #4CAF50;
+}
+
+.reject-purchase-button {
+  background-color: #f44336;
+}
+
+.approve-purchase-button:hover {
+  background-color: #45a049;
+}
+
+.reject-purchase-button:hover {
+  background-color: #e41f1f;
+}

@@ -1,0 +1,248 @@
+.home-page-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.home-hero-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 10px;
+}
+
+.home-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.home-subtitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.home-description {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.home-login-button {
+  background-color: #ff5a5f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.home-login-button:hover {
+  background-color: #e04848;
+}
+
+/* Featured Books Section */
+.home-featured-books {
+  margin-top: 50px;
+}
+
+.home-section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home-book-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  gap: 20px; /* Add spacing between books */
+}
+
+.home-book-item {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;  /* Fixed width to maintain uniformity */
+  height: 140px; /* Fixed height to maintain uniformity */
+  position: relative; /* Position relative to control child elements */
+}
+
+.home-book-title {
+  font-size: 16px;
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.home-book-title marquee {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+}
+
+.home-book-cover {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.home-book-author {
+  font-size: 14px;
+  color: gray;
+  position: absolute;
+  bottom: 7px;  /* Align author name at the bottom */
+  width: 85%;
+}
+
+/* Scrollable section for additional books */
+.home-book-scroll {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+/* Testimonials Section */
+.home-testimonials-section {
+  margin-top: 50px;
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.home-testimonial-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home-testimonial-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.home-testimonial-author {
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Community Section */
+.home-community-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.home-community-button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.home-community-button:hover {
+  background-color: #367bbd;
+}
+
+/* User Count Section */
+.home-user-count {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.home-user-icon {
+  font-size: 50px;
+  color: #ff5a5f;
+}
+
+.home-total-users {
+  font-size: 24px;
+  margin-top: 10px;
+  color: #4a90e2;
+}
+
+/* Trending Categories Section */
+.home-trending-categories {
+  margin-top: 50px;
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.home-categories-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.home-category-item {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* New Arrivals Section */
+.home-new-arrivals {
+  margin-top: 50px;
+  background-color: #ffe0b2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.home-new-books-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-new-book-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  height: 140px;
+}
+
+.home-new-book-icon{
+  width: 30px;
+  height: 30px;
+}
+
+.home-new-book-item .home-book-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Authors Section */
+.home-authors-section {
+  margin-top: 50px;
+}
+
+.home-authors-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.home-author-item {
+  text-align: center;
+}
+
+.home-author-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.home-author-name {
+  font-size: 16px;
+  margin-top: 10px;
+}

@@ -1,0 +1,42 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 5px 15px;
+  width: 400px;
+  /* max-width: 500px; */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.book-search-button {
+  background: none; /* Remove background color */
+  color: #007acc; /* Professional blue color */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-search-button svg {
+  font-size: 1.5rem;
+  color: #007acc; /* Set the search icon color */
+}

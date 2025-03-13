@@ -1,0 +1,52 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .activity-content, .bookmark-content {
+    margin-top: 20px;
+  }
+  
+  .activity-item, .bookmark-item {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .activity-book-cover, .bookmark-book-cover {
+    width: 80px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  
+  .activity-details, .bookmark-details {
+    flex: 1;
+  }
+  

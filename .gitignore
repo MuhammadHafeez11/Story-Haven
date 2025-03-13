@@ -1,0 +1,26 @@
+# Ignore Node.js dependencies (root + frontend)
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore build files
+dist/
+build/
+
+# Ignore uploaded files
+Uploads/
+
+# Ignore editor/system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ignore specific folder inside frontend/pages
+FrontEnd/src/pages/Products

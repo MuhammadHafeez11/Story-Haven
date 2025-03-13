@@ -1,0 +1,85 @@
+.manage-users-container {
+  padding: 20px;
+  /* background-color: #f4f4f9; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.manage-users-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+/* 
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-table th {
+  background-color: #007bff;
+  color: #fff;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.custom-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.custom-table tr:hover {
+  background-color: #f9f9f9;
+} */
+
+/* Icons and Actions */
+.manageuser-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.manageuser-promote-button, .manageuser-demote-button, .manageuser-delete-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.manageuser-promote-button:hover {
+  color: #4caf50;
+  transform: scale(1.1);
+}
+
+.manageuser-demote-button:hover {
+  color: #ff9800;
+  transform: scale(1.1);
+}
+
+.manageuser-delete-button:hover {
+  color: #f44336;
+  transform: scale(1.1);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
