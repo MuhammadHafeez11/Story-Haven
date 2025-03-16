@@ -29,7 +29,7 @@ const errorHandler = require('./BackEnd/middlewares/errorHandler');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Replace with your client URL
+    origin: ["http://localhost:5173", "https://story-haven-9fty70rwp-muhammad-hafeezs-projects-edceeb97.vercel.app/"], // Replace with your client URL
     credentials: true // Allow credentials
 }));
 
