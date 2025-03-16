@@ -1,30 +1,30 @@
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const { connectMongoDb } = require('./BackEnd/config/connection');
+const { connectMongoDb } = require('./config/connection');
 require('dotenv').config();
 const path = require('path')
 
-const UserRouter = require('./BackEnd/routes/userRoute');
-const BookRouter = require('./BackEnd/routes/bookRoute');
-const BookMarkRouter = require('./BackEnd/routes/bookmarkRoute');
-const ReadingHistoryRouter = require('./BackEnd/routes/readinghistoryRoute');
-const AuthorRouter = require('./BackEnd/routes/authorRoute');
-const CategoryRouter = require('./BackEnd/routes/categoryRoute');
-const ProductCategoryRouter = require('./BackEnd/routes/productCategoryRoute');
-const FindBookRouter = require('./BackEnd/routes/findbookRoute');
-const CartRouter = require('./BackEnd/routes/cartRoute');
-const ProductRoute = require('./BackEnd/routes/product');
-const ProductPurchase = require('./BackEnd/routes/purchaseProduct');
-const LocationRoute = require('./BackEnd/routes/location');
-const RoleRouter = require('./BackEnd/routes/role');
-const ColorRouter = require('./BackEnd/routes/colorRoute');
-const TasksRouter = require('./BackEnd/routes/tasks');
-const SaleRouter = require('./BackEnd/routes/sale');
-const assignedTasksRoutes = require('./BackEnd/routes/assignedTasks');
-const PurchaseRouter = require('./BackEnd/routes/purchaseRoute');
-const AdminDataRouter = require('./BackEnd/routes/admindataRoute');
-const errorHandler = require('./BackEnd/middlewares/errorHandler');
+const UserRouter = require('./routes/userRoute');
+const BookRouter = require('./routes/bookRoute');
+const BookMarkRouter = require('./routes/bookmarkRoute');
+const ReadingHistoryRouter = require('./routes/readinghistoryRoute');
+const AuthorRouter = require('./routes/authorRoute');
+const CategoryRouter = require('./routes/categoryRoute');
+const ProductCategoryRouter = require('./routes/productCategoryRoute');
+const FindBookRouter = require('./routes/findbookRoute');
+const CartRouter = require('./routes/cartRoute');
+const ProductRoute = require('./routes/product');
+const ProductPurchase = require('./routes/purchaseProduct');
+const LocationRoute = require('./routes/location');
+const RoleRouter = require('./routes/role');
+const ColorRouter = require('./routes/colorRoute');
+const TasksRouter = require('./routes/tasks');
+const SaleRouter = require('./routes/sale');
+const assignedTasksRoutes = require('./routes/assignedTasks');
+const PurchaseRouter = require('./routes/purchaseRoute');
+const AdminDataRouter = require('./routes/admindataRoute');
+const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
