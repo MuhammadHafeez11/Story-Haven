@@ -67,7 +67,7 @@ const AdminDashboard = () => {
     const getUserRoleById = async () => {
       try{
         const response = await axiosInstance.get(`/user/${userId}`);
-        setUserRole(response.data.data.role.name);
+        setUserRole(response?.data?.data?.role?.name);
       }
       catch(error){
         console.log(error);

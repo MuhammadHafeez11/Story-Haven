@@ -50,7 +50,7 @@ const ReadBook = () => {
             <div className="cover-image">
               <h3>Cover Image:</h3>
               <img
-                src={`http://localhost:5000/uploads/bookUploads/${book.coverImage}`}
+                src={`${axiosInstance.defaults.baseURL}/uploads/bookUploads/${book.coverImage}`}
                 alt="Cover"
               />
             </div>

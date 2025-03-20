@@ -178,7 +178,7 @@ const BookForm = ({ id, onClose }) => {
           />
           {currentImage && (
             <a
-              href={`http://localhost:5000/uploads/bookUploads/${currentImage}`}
+              href={`${axiosInstance.defaults.baseURL}/uploads/bookUploads/${currentImage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="view-image-links"
@@ -202,7 +202,7 @@ const BookForm = ({ id, onClose }) => {
           />
           {currentPDF && (
             <a
-              href={`http://localhost:5000/uploads/bookUploads/${currentPDF}`}
+              href={`${axiosInstance.defaults.baseURL}/uploads/bookUploads/${currentPDF}`}
               target="_blank"
               rel="noopener noreferrer"
               className="view-image-links"

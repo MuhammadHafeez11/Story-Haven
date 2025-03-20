@@ -8,7 +8,7 @@ import { toast } from "react-hot-toast";
 import "../styles/pagesStyles/TrackBook.css";
 import axiosInstance from "../axios/axiosInstance";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `http://localhost:5000/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `${axiosInstance.defaults.baseURL}/pdf.worker.min.mjs`;
 
 const TrackBook = () => {
   const { bookId } = useParams();
@@ -172,7 +172,7 @@ const TrackBook = () => {
           {book.pdfFile && (
             <div className="pdf-viewer">
               <Document
-                file={`http://localhost:5000/uploads/bookUploads/${book.pdfFile}`}
+                file={`${axiosInstance.defaults.baseURL}/uploads/bookUploads/${book.pdfFile}`}
                 onLoadSuccess={onDocumentLoadSuccess}
               >
                 <Page pageNumber={currentPage} />

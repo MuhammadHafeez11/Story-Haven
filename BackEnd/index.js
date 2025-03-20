@@ -40,7 +40,7 @@ app.use(cookieParser());
 connectMongoDb(process.env.DB_URI);
 
 // middlware
-app.use('/uploads', express.static(path.join(__dirname,  'Uploads')));
+app.use('/uploads', express.static(path.join(__dirname,  '../Uploads')));
 
 // Serve the PDF worker file with the correct extension
 app.use('/pdf.worker.min.mjs', express.static(path.join(__dirname,  'node_modules/pdfjs-dist/build/pdf.worker.min.mjs')));

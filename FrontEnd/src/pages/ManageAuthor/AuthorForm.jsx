@@ -102,7 +102,7 @@ const AuthorFormModal = ({ authorId, closeModal, fetchAuthors }) => {
                         />
                         {currentPhoto && (
                             <a
-                                href={`http://localhost:5000/uploads/authorUploads/${currentPhoto}`}
+                                href={`${axiosInstance.defaults.baseURL}/authorUploads/${currentPhoto}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="author-photo-link"

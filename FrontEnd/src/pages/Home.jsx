@@ -6,6 +6,7 @@ import { fetchAllBooks } from '../api/bookApi';  // Import the API function
 import { fetchTotalUsers } from '../api/userApi'; // API call to fetch total users
 import { fetchCategories } from '../api/categoryApi'; // API call for categories
 import { fetchAuthors } from '../api/authorApi';  // API call for authors
+import axiosInstance from '../axios/axiosInstance';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -63,7 +64,7 @@ const Home = () => {
             books.slice(0, 6).map(book => (
               <div key={book._id} className="home-book-item">
                 <img
-                  src={`http://localhost:5000/uploads/bookUploads/${book.coverImage}`}
+                  src={`${axiosInstance.defaults.baseURL}/uploads/bookUploads/${book.coverImage}`}
                   alt={book.title}
                   className="home-book-cover"
                 />
@@ -101,7 +102,7 @@ const Home = () => {
             authors.map(author => (
               <div key={author._id} className="home-author-item">
                 <img
-                  src={`http://localhost:5000/uploads/authorUploads/${author.photo}`}
+                  src={`${axiosInstance.defaults.baseURL}/uploads/authorUploads/${author.photo}`}
                   alt={author.name}
                   className="home-author-photo"
                 />

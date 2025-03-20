@@ -118,7 +118,7 @@ const Books = () => {
               }
             >
               <img
-                src={`http://localhost:5000/uploads/bookUploads/${book.coverImage}`}
+                src={`${axiosInstance.defaults.baseURL}/uploads/bookUploads/${book.coverImage}`}
                 alt={book.title}
                 className="book-cover-image"
               />
@@ -169,7 +169,7 @@ const Books = () => {
             </div>
           
         )) : (
-          <p className="no-books-message">No books available</p>
+          <p className="no-books-message">Loading...</p>
         )}
       </div>
     </div>

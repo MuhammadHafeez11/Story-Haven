@@ -109,7 +109,7 @@ const ManageAuthors = () => {
       cell: (info) =>
         info.getValue() && (
           <img
-            src={`http://localhost:5000/uploads/authorUploads/${info.getValue()}`}
+            src={`${axiosInstance.defaults.baseURL}/uploads/authorUploads/${info.getValue()}`}
             alt="Author"
             width="50"
             className="author-photo"
