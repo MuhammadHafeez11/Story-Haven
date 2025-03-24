@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../styles/componentsStyles/UserDashboard/UserModalStyles/PurchaseModal.css'
+import './PurchaseModal.css'
 
 const PurchasesModal = ({ isOpen, onClose, purchasedBooks, totalSpent }) => {
   if (!isOpen) return null;

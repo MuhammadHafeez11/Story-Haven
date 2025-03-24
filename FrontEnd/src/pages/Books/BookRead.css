@@ -1,0 +1,148 @@
+/* Container Styling */
+.read-book-container {
+  max-width: 900px;
+  margin: 75px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Back Button */
+.back-button {
+  background-color: #007acc;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #005fa3;
+}
+
+/* Book Details */
+.book-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Cover Image */
+.cover-image {
+  max-width: 300px;
+}
+
+.cover-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Title */
+.book-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Book Description */
+.book-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0;
+  padding: 0 15px;
+}
+
+/* Book Metadata */
+.book-meta {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* max-width: 600px; */
+  text-align: left;
+}
+
+.book-meta h2 {
+  font-size: 20px;
+  color: #007acc;
+  margin-bottom: 5px;
+}
+
+.book-meta h2 span {
+  color: #333;
+  font-weight: normal;
+}
+
+.book-meta p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Loading Text */
+.loading-text {
+  font-size: 18px;
+  color: #007acc;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .read-book-container {
+    padding: 15px;
+  }
+
+  .book-title {
+    font-size: 24px;
+  }
+
+  .book-description {
+    font-size: 14px;
+  }
+
+  .book-meta h2 {
+    font-size: 18px;
+  }
+
+  .book-meta p {
+    font-size: 13px;
+  }
+
+  .cover-image {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-title {
+    font-size: 22px;
+  }
+
+  .book-description {
+    font-size: 13px;
+  }
+
+  .book-meta {
+    padding: 10px;
+  }
+
+  .cover-image {
+    max-width: 200px;
+  }
+}

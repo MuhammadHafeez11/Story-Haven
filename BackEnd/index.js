@@ -43,8 +43,9 @@ connectMongoDb(process.env.DB_URI);
 app.use('/uploads', express.static(path.join(__dirname,  '../Uploads')));
 
 // Serve the PDF worker file with the correct extension
-app.use('/pdf.worker.min.mjs', express.static(path.join(__dirname,  'node_modules/pdfjs-dist/build/pdf.worker.min.mjs')));
+// app.use('/pdf.worker.min.mjs', express.static(path.join(__dirname,  'node_modules/pdfjs-dist/build/pdf.worker.min.mjs')));
 
+app.use('/pdfjs', express.static(path.join(__dirname, 'node_modules/pdfjs-dist/build')));
 
 //Routes
 app.use('/user', UserRouter);

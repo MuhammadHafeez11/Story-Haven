@@ -5,7 +5,7 @@ import ViewBookmarksModal from "./userModals/ViewBookMarkModal";
 import PurchasesModal from "./userModals/PurchaseModal";
 import UserProfileModal from "./userModals/UserProfileModal"; // Import UserProfileModal
 import axiosInstance from "../../axios/axiosInstance";
-import "../../styles/componentsStyles/UserDashboard/UserDashboard.css";
+import "./UserDashboard.css";
 
 const UserDashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

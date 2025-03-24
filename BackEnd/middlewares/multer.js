@@ -34,7 +34,7 @@ const uploadBookImage = multer({
         fileSize: 3 * 1024 * 1024, // File size limit for images (3MB)
     },
     fileFilter: function (req, file, cb) {
-        const fileTypes = /jpeg|jpg|png|pdf/;
+        const fileTypes = /jpeg|jpg|png|pdf|webp|/;
         const extname = fileTypes.test(path.extname(file.originalname).toLowerCase());
         const mimetype = fileTypes.test(file.mimetype);
 

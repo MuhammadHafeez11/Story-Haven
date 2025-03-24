@@ -1,0 +1,139 @@
+.manage-categories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e0f7fa; /* Light bluish background */
+  min-height: 100vh;
+  margin: 65px auto;
+  padding: 20px;
+}
+
+.title {
+  color: #00796b;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.search-add-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon-category {
+  position: absolute;
+  padding-top: 8px;
+  top: 10%;
+  left: 375px;
+  color: #00796b;
+}
+
+.input-field-category {
+  width: 250px;
+  padding: 10px 10px 10px 4px; /* Adjust padding to account for the icon */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00796b;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* 
+.add-button-category {
+  padding: 10px;
+  background-color: #00796b;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+/* 
+.add-button:hover {
+  background-color: #004d40;
+} */
+
+.add-cat-button{
+background-color: #00796b;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+.add-cat-button:hover {
+  background-color: #004d40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-cat-button::after {
+  content: 'Add Category';
+  margin-left: 10px;
+  font-size: 1rem;
+}
+/* 
+.categories-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.categories-table th,
+.categories-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.categories-table th {
+  background-color: #00796b;
+  color: #fff;
+}
+
+.edit-button,
+.delete-button-cat {
+  background: none;
+  border: none;
+  color: #00796b;
+  cursor: pointer;
+  font-size: 18px;
+
+}
+
+.edit-button:hover {
+  color: #004d40;
+}
+
+.delete-button-cat:hover{
+  color: #004d40;
+} */
+
+.loading-text {
+  color: #00796b;
+  font-size: 18px;
+}

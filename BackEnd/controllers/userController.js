@@ -15,7 +15,7 @@ async function handleLoginUser(req, res, next) {
     try {
         const user = await User.findOne({ username });
         if (!user) {
-            const error = new Error('User not found. Please sign up first.');
+            const error = new Error('Invalid credentials. Please try again.');
             error.statusCode = 400;
             return next(error);
         }

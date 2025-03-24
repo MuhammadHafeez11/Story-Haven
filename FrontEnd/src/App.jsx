@@ -1,30 +1,29 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Books from './pages/Books';
-import Login from './components/Login';
-import Signup from './components/SignUp';
-import ReadBook from './pages/BookRead';
-import ReadingHistory from './pages/ReadignHistory';
-import SearchBooks from './components/SearchBooks';
-import AdminDashboard from './components/AdminDashboard';
-import PurchaseRequests from './components/PurchaseRequests';
-import TrackBook from './pages/TrackBook';
-import ManageUsers from './pages/ManageUser';
-import ManageAuthors from './pages/ManageAuthor/ManageAuthor';
-import ManageCategories from './pages/ManageCategory/ManageCategory';
-import CategoryForm from './pages/ManageCategory/CategoryForm';
-import ManageBooks from './pages/ManageBooks/ManageBook';
-import CartAndPurchase from './pages/CartAndPurchase';
-import BookForm from './pages/ManageBooks/BookForm';
-import AuthorForm from './pages/ManageAuthor/AuthorForm';
-import SeeAllPurchases from './pages/SeeAllPurchases';
+import Navbar from './components/Narbar/Navbar';
+import Home from './components/Home/Home';
+import Books from './pages/Books/Books.jsx';
+import Login from './components/SignUpLogin/Login.jsx';
+import Signup from './components/SignUpLogin/SignUp.jsx';
+import ReadBook from './pages/Books/BookRead.jsx';
+import ReadingHistory from './pages/Books/ReadignHistory.jsx';
+import SearchBooks from './components/Search/SearchBooks.jsx';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard.jsx';
+import PurchaseRequests from './pages/AdminDashboard/ManagePurchase/PurchaseRequests.jsx';
+import TrackBook from './pages/Books/TrackBook.jsx';
+import ManageUsers from './pages/AdminDashboard/ManageUser.jsx';
+import ManageAuthors from './pages/AdminDashboard/ManageAuthor/ManageAuthor';
+import ManageCategories from './pages/AdminDashboard/ManageCategory/ManageCategory.jsx';
+import CategoryForm from './pages/AdminDashboard/ManageCategory/CategoryForm.jsx';
+import ManageBooks from './pages/AdminDashboard/ManageBooks/ManageBook.jsx';
+import CartAndPurchase from './pages/Cart/CartAndPurchase.jsx';
+import BookForm from './pages/AdminDashboard/ManageBooks/BookForm.jsx';
+import AuthorForm from './pages/AdminDashboard/ManageAuthor/AuthorForm.jsx';
+import SeeAllPurchases from './pages/AdminDashboard/ManagePurchase/SeeAllPurchases.jsx';
 import { Toaster } from 'react-hot-toast';
-import ProtectedRoute from './components/ProtectedRoutes.jsx';
-import UserDashboard from './components/userDashboard/UserDashboard';
-
+import ProtectedRoute from './components/routeGuard/ProtectedRoutes.jsx';
+import UserDashboard from './components/userDashboard/UserDashboard.jsx';
 
 // import AddProduct from './pages/Products/AddProduct.jsx';
 import AllInvoices from './pages/Products/SaleProduct/PrintSaleInvoices/AllInvoices.jsx';
@@ -48,12 +47,25 @@ import AddNewTask from './pages/Products/AllProducts/AddItems/AddNewTask.jsx';
 import 'leaflet/dist/leaflet.css';
 
 
-const App = () => {
+const AppLayout = ({ children }) => {
+  const location = useLocation()
+  const hideNavbarPaths = ["/login", "/signup", "/track/:bookId"]
+  const shouldShowNavbar = !hideNavbarPaths.includes(location.pathname)
 
   return (
+    <>
+      {shouldShowNavbar && <Navbar />}
+      {children}
+    </>
+  )
+}
+
+const App = () => {
+  return (
     <Router>
+      <AppLayout>
       <Toaster />
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -367,6 +379,7 @@ const App = () => {
           }
         />
       </Routes>
+      </AppLayout>
     </Router>
   );
 };

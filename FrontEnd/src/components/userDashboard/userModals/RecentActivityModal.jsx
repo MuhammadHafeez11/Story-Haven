@@ -1,7 +1,7 @@
 // RecentActivityModal.jsx
 import React, { useEffect } from "react";
 import { FaTimes } from "react-icons/fa"; // Icon for close button
-import "../../../styles/componentsStyles/UserDashboard/UserModalStyles/RecentActivityModal.css"; // Import the CSS file for modal
+import "./RecentActivityModal.css"; // Import the CSS file for modal
 
 const RecentActivityModal = ({ isOpen, onClose, books, readingHistory }) => {
   useEffect(() => {

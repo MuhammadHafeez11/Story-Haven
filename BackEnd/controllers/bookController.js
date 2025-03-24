@@ -31,6 +31,30 @@ async function handleUploadBook(req, res, next) {
     }
 }
 
+async function handleUpdateBookById(req, res, next) {
+    try {
+        const { title, description, price, categoryID, authorID } = req.body;
+        let coverImage, pdfFile;
+
+        if (req.files && req.files.image) {
+            coverImage = req.files.image ? req.files.image[0].path.replace(/^.*[\\/](Uploads[\\/])?/, '') : null;
+        }
+        
+        if (req.files && req.files.pdf) {
+            pdfFile = req.files.pdf ? req.files.pdf[0].path.replace(/^.*[\\/](Uploads[\\/])?/, '') : null;
+        }
+        
+        let updateFields = { title, description, price, categoryID, authorID, coverImage, pdfFile };
+        // console.log(updateFields);
+
+        let data = await Book.findByIdAndUpdate({ _id: req.params.id }, { $set: updateFields });
+        res.send(data);
+    } catch (err) {
+        next(err);
+    }
+}
+
+
 async function handleGetAllBooks(req, res, next) {
     try {
         let data = await Book.find().populate('authorID').populate('categoryID');
@@ -87,29 +111,6 @@ async function handleUpdateBookIsFeaturedStatus(req, res, next) {
         res.status(200).json({ message: 'Book featured status updated successfully',  updatedBook });
     } catch (error) {
         next(error);
-    }
-}
-
-async function handleUpdateBookById(req, res, next) {
-    try {
-        const { title, description, price, categoryID, authorID } = req.body;
-        let coverImage, pdfFile;
-
-        if (req.files && req.files.image) {
-            coverImage = req.files.image ? req.files.image[0].path.replace(/^.*[\\/](Uploads[\\/])?/, '') : null;
-        }
-        
-        if (req.files && req.files.pdf) {
-            pdfFile = req.files.pdf ? req.files.pdf[0].path.replace(/^.*[\\/](Uploads[\\/])?/, '') : null;
-        }
-        
-        let updateFields = { title, description, price, categoryID, authorID, coverImage, pdfFile };
-        // console.log(updateFields);
-
-        let data = await Book.findByIdAndUpdate({ _id: req.params.id }, { $set: updateFields });
-        res.send(data);
-    } catch (err) {
-        next(err);
     }
 }
 

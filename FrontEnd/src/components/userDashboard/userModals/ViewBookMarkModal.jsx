@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import "../../../styles/componentsStyles/UserDashboard/UserModalStyles/ViewBookMarkModal.css";
+import "./ViewBookMarkModal.css";
 import axiosInstance from "../../../axios/axiosInstance";
 
 const ViewBookmarksModal = ({ isOpen, onClose, userId }) => {

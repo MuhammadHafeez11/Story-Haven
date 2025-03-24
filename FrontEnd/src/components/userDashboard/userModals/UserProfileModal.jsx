@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../../styles/componentsStyles/UserDashboard/UserModalStyles/UserProfileModal.css";
+import "./UserProfileModal.css";
 import axiosInstance from "../../../axios/axiosInstance";
 import { FaTimes } from "react-icons/fa";
 import toast from "react-hot-toast";
